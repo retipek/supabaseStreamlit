@@ -19,7 +19,7 @@ def run_query():
 
 rows = run_query()
 
-st.dataframe(rows)
+#st.dataframe(rows)
 # Print results.
-#for row in rows.data:
-#    st.write(f"{row['name']} has a :{row['pet']}:")
+for row in rows.data:
+    st.write(f"{row['Data']} xd :{row['Godzina']}:")
