@@ -15,10 +15,11 @@ supabase = init_connection()
 # Uses st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=600)
 def run_query():
-    return supabase.table("mytable").select("*").execute()
+    return supabase.table("dane_2022-06-03").select("*").execute()
 
 rows = run_query()
 
+st.dataframe(rows)
 # Print results.
-for row in rows.data:
-    st.write(f"{row['name']} has a :{row['pet']}:")
+#for row in rows.data:
+#    st.write(f"{row['name']} has a :{row['pet']}:")
