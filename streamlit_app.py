@@ -18,8 +18,8 @@ def run_query():
     return supabase.table("dane_2022-06-03").select("*").execute()
 
 rows = run_query()
-
-#st.dataframe(rows)
+st.write('Hejo')
+st.dataframe(rows)
 # Print results.
-for row in rows.data:
-    st.write(f"{row['Data']} xd :{row['Godzina']}:")
+#for row in rows.data:
+#    st.write(f"{row['Data']} xd :{row['Godzina']}:")
